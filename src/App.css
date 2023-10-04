@@ -1,0 +1,34 @@
+#app-container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 200px 1fr;
+  gap: 10px;
+}
+
+
+#logo {
+  grid-row: 1 / 2; /* Image takes up the first row */
+  grid-column: 1 / 2; /* Image takes up the first column */
+  background-color: red;
+}
+
+#navbar {
+  grid-row: 1 / 2; /* Navbar takes up the entire first column and spans two rows */
+  grid-column: 2 /3; /* Navbar takes up the entire second column */
+  background-color: purple;
+  height: 200px;
+}
+
+#sidebar {
+  grid-row: 2 / 3; /* First column takes up the second row */
+  grid-column: 1 / 2; /* First column takes up the first column */
+  flex-direction: column;
+  background-color: yellow;
+  display: flex;
+}
+
+#content {
+  grid-row: 2 / 3; /* Content takes up the second row */
+  grid-column: 2 / 3; /* Content takes up the second column */
+  background-color: rgba(0, 255, 255, 0.197);
+}
