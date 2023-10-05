@@ -11,11 +11,9 @@ import Logo from './Components/Logo/Logo'
     const [selectedLogo, setSelectedLogo] = useState("https://images.ctfassets.net/h8q6lxmb5akt/5qXnOINbPrHKXWa42m6NOa/421ab176b501f5bdae71290a8002545c/nba-logo_2x.png'")
     return (
       <div className="App">
-          <GlobalStateProvider >
-        <Logo selectedLogo={selectedLogo}/>
-        <NbaTeams 
-        selectedLogo={selectedLogo}
-        setSelectedLogo={setSelectedLogo}/>
+          <GlobalStateProvider>
+        <Logo />
+        <NbaTeams />
         </GlobalStateProvider>
       </div>
     );

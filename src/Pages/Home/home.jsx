@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { nbaTeams } from './team';
 import "./home.css"
+import { useGlobalState } from '../../Components/context/context';
 
-
-const NbaTeams = ({selectedLogo, setSelectedLogo}) => {
+const NbaTeams = () => {
   const [apiTeams, setApiTeams] = useState([]);
   const [loading, setLoading] = useState(true);
-//   const [selectedLogo, setSelectedLogo] = useState('https://images.ctfassets.net/h8q6lxmb5akt/5qXnOINbPrHKXWa42m6NOa/421ab176b501f5bdae71290a8002545c/nba-logo_2x.png'
+  const { selectedLogo, setSelectedLogo} = useGlobalState();
 
 
   useEffect(() => {
