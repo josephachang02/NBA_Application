@@ -56,16 +56,16 @@ const NbaTeams = () => {
   };
 
   return (
-    <div>
+    <div id="content">
       <h1>NBA Teams</h1>
       <div>
-        <button onClick={() => handleLogoClick(selectedLogo)}>
+        {/* <button onClick={() => handleLogoClick(selectedLogo)}>
           <img
             src={selectedLogo}
             alt="Selected Team Logo"
             style={{ maxHeight: '200px', maxWidth: '200px', backgroundColor: 'white'}}
           />
-        </button>
+        </button> */}
       </div>
       {loading ? (
         <p>Loading...</p>

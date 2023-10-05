@@ -1,14 +1,13 @@
 import React from 'react';
 import { useGlobalState } from '../context/context';
-import { useAppContext } from '../context/AppState';
-
+import "../../App.css"
 
 const Logo = () => {
 
   const { selectedLogo } = useGlobalState();
 
   return (
-    <div>
+    <div id ="logo">
       <h1>Logo Component</h1>
       <img
         src={selectedLogo}
