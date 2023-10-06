@@ -3,6 +3,7 @@ import axios from 'axios';
 import { nbaTeams } from './team';
 import "./home.css"
 import { useGlobalState } from '../../Components/context/context';
+import '../../App.css'
 
 const NbaTeams = () => {
   const [apiTeams, setApiTeams] = useState([]);
@@ -58,18 +59,7 @@ const NbaTeams = () => {
   return (
     <div id="content">
       <h1>NBA Teams</h1>
-      <div>
-        {/* <button onClick={() => handleLogoClick(selectedLogo)}>
-          <img
-            src={selectedLogo}
-            alt="Selected Team Logo"
-            style={{ maxHeight: '200px', maxWidth: '200px', backgroundColor: 'white'}}
-          />
-        </button> */}
-      </div>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
+      
         <div className="team-buttons-container">
           {mergedTeams.map((team) => (
             <button
@@ -85,7 +75,7 @@ const NbaTeams = () => {
             </button>
           ))}
         </div>
-      )}
+      
     </div>
   );
 };

@@ -41,13 +41,11 @@ function App() {
       <div id="sidebar">
         <Sidebar />
         <Routes>
-          <Route path="/TeamSchedule" element={<TeamSchedule />}/>
-          <Route path="/TeamStats" elements={<TeamStats />}/>
-          <Route path="/TeamNews" elements={<TeamNews />}/>
+          <Route path="/TeamSchedule" element={<TeamSchedule />} />
+          <Route path="/TeamStats" element={<TeamStats />} />
+          <Route path="/TeamNews" element={<TeamNews />} />
+          <Route path="/LiveTeam" element={<LiveTeam />} />
         </Routes>
-        </div>
-      <div id="content">
-    
         </div>
         </GlobalStateProvider>
       </div>
