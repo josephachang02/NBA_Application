@@ -52,9 +52,9 @@ const NbaTeams = () => {
   };
 
   const mergedTeams = mergeTeams();
-  
-  const handleLogoClick = (logoUrl) => {
-    setSelectedLogo(logoUrl);
+
+  const handleLogoClick = (team) => {
+    setSelectedLogo(team);
   };
 
   return (
@@ -66,7 +66,7 @@ const NbaTeams = () => {
             <button
               key={team.id}
               className="team-button"
-              onClick={() => handleLogoClick(team.logo)}
+              onClick={() => handleLogoClick(team)}
             >
               <img
                 src={team.logo}
