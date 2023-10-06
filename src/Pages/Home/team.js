@@ -29,7 +29,7 @@ export const nbaTeams = [
     {
       id: 4,
       teamName: 'Hornets',
-      colors: ['#1D1160', '#00788c', '#00788c'],
+      colors: ['#1D1160', '#1D1160', '#00788c'],
       logo: "https://content.sportslogos.net/logos/6/5120/full/1926_charlotte__hornets_-primary-2015.png",
       conference: "Eastern",
       division: "Southeast",
@@ -137,7 +137,7 @@ export const nbaTeams = [
     {
       id: 16,
       teamName: 'Heat',
-      colors: ['#98002E', '#F9A01B', '#000000'],
+      colors: ['#98002E', '#000000', '#F9A01B'],
       logo: "https://content.sportslogos.net/logos/6/214/full/burm5gh2wvjti3xhei5h16k8e.gif",
       conference: "Eastern",
       division: "Southeast",
@@ -146,7 +146,7 @@ export const nbaTeams = [
     {
       id: 17,
       teamName: 'Bucks',
-      colors: ['#00471B', '#EEE1C6', '#FFFFFF'],
+      colors: ['#00471B', '#EEE1C6', '#0077c0'],
       logo: "https://content.sportslogos.net/logos/6/225/full/milwaukee_bucks_logo_primary_20165763.png",
       conference: "Eastern",
       division: "Central",
@@ -200,7 +200,7 @@ export const nbaTeams = [
     {
       id: 23,
       teamName: '76ers',
-      colors: ['#006BB6', '#ED174C', '#002B5C'],
+      colors: ['#002B5C', '#ED174C', '#006BB6'],
       logo: "https://content.sportslogos.net/logos/6/218/full/7034_philadelphia_76ers-primary-2016.png",
       conference: "Eastern",
       division: "Atlantic",
@@ -227,7 +227,7 @@ export const nbaTeams = [
     {
       id: 26,
       teamName: 'Kings',
-      colors: ['#5A2D81', '#63727A', '#000000'],
+      colors: ['#5A2D81', '#63727A', '#FFFFFF'],
       logo: "https://content.sportslogos.net/logos/6/240/full/4043_sacramento_kings-primary-2017.png",
       conference: "Western",
       division: "Pacific",

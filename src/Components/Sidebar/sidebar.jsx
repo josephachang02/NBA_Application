@@ -13,19 +13,19 @@ const Sidebar = () => {
   
   return (
     <div id= "sidebar" 
-    style={{ backgroundColor: selectedLogo.color[1]}}
+    style={{ backgroundColor: selectedLogo.color[1], display: 'flex', flexDirection: 'column', alignItems: 'center'}}
     >
       <Link to="/TeamSchedule" >
-        <button>Team Schedule</button>
+        <button style={{ backgroundColor: selectedLogo.color[2], margin: '45px'}}>Team Schedule</button>
       </Link>
       <Link to="/TeamStats" >
-        <button>Team Stats</button>
+        <button style={{ backgroundColor: selectedLogo.color[2], marginBottom: '45px'}}>Team Stats</button>
       </Link>
       <Link to="/TeamNews" >
-        <button>Team News</button>
+        <button style={{ backgroundColor: selectedLogo.color[2], marginBottom: '45px'}}>Team News</button>
       </Link>
       <Link to="/LiveTeam" >
-        <button>Live Team Games</button>
+        <button style={{ backgroundColor: selectedLogo.color[2], marginBottom: '45px'}}>Live Team Games</button>
       </Link>
     </div>
   )

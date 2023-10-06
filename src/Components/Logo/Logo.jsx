@@ -8,13 +8,14 @@ const Logo = () => {
 
   console.log(selectedLogo);
   return (
-    <div id ="logo">
+    // <<div id ="logo">>
+   <>
       <img
         src={selectedLogo.logo}
         alt="Selected Logo"
-        style={{ maxHeight: '200px', maxWidth: '200px', backgroundColor: 'white' }}
+        style={{ maxHeight: '200px', maxWidth: '200px', backgroundColor: 'white',alignItems: 'center', justifyContent:"center" }}
       />
-    </div>
+    </>
   );
 };
 

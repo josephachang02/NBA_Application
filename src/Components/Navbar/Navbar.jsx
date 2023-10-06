@@ -15,23 +15,23 @@ const Navbar = () => {
   
   return (
     <div id= "navbar" 
-    style={{ backgroundColor: selectedLogo.color[0]}}
+    style={{ backgroundColor: selectedLogo.color[0],display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}
     >
     <ul>
       <Link to="/" >
-        <button>Home</button>
+        <button style={{ backgroundColor: selectedLogo.color[2], margin: '20px'}}>Home</button>
       </Link>
       <Link to="/LiveScore" >
-        <button>Live Score</button>
+        <button style={{ backgroundColor: selectedLogo.color[2], margin: '20px'}}>Live Score</button>
       </Link>
       <Link to="/LeagueLeaders" >
-        <button>League Leaders</button>
+        <button style={{ backgroundColor: selectedLogo.color[2], margin: '20px'}}>League Leaders</button>
       </Link>
       <Link to="/LeagueStandings" >
-        <button>League Standings</button>
+        <button style={{ backgroundColor: selectedLogo.color[2], margin: '20px'}}>League Standings</button>
       </Link>
       <Link to="/NBA_News" >
-        <button>NBA News</button>
+        <button style={{ backgroundColor: selectedLogo.color[2], margin: '20px'}}>NBA News</button>
       </Link>
     </ul>
     </div>
