@@ -6,6 +6,7 @@ const Logo = () => {
 
   const { selectedLogo } = useGlobalState();
 
+  console.log(selectedLogo);
   return (
     <div id ="logo">
       <h1>Logo Component</h1>
