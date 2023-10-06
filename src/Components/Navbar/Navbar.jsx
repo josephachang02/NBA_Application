@@ -4,7 +4,7 @@ import { useGlobalState } from '../context/context';
 
 
 const Navbar = () => {
-    const { navbarBackgroundColor } = useGlobalState();
+    const { selectedLogo } = useGlobalState();
 
   // Check if selectedTeam is available and has colors
   // const selectedTeamColors = selectedTeam ? selectedTeam.colors : [];
@@ -15,7 +15,7 @@ const Navbar = () => {
   
   return (
     <div id= "navbar" 
-    style={{ backgroundColor: navbarBackgroundColor}}
+    style={{ backgroundColor: selectedLogo.color[0]}}
     >
     <ul>
       <Link to="/" >

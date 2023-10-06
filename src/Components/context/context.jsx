@@ -10,7 +10,8 @@ export function useGlobalState() {
 
 export function GlobalStateProvider({ children }) {
   const [selectedLogo, setSelectedLogo] = useState(
-    'https://images.ctfassets.net/h8q6lxmb5akt/5qXnOINbPrHKXWa42m6NOa/421ab176b501f5bdae71290a8002545c/nba-logo_2x.png'
+    {logo: 'https://images.ctfassets.net/h8q6lxmb5akt/5qXnOINbPrHKXWa42m6NOa/421ab176b501f5bdae71290a8002545c/nba-logo_2x.png',
+  color: ["#C9082A", "#17408B"]}
   );
   const [apiTeams, setApiTeams] = useState([]);
   const [loading, setLoading] = useState(true);

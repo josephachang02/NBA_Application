@@ -30,23 +30,23 @@ function App() {
       </div>
       <div id="navbar">
         <Navbar />
-        <Routes>
+      </div>
+      <Routes>
           <Route path="/" element={<NbaTeams />} />
           <Route path="/LiveScore" element={<LiveScore />} />
           <Route path="/LeagueLeaders" element={<LeagueLeaders />} />
           <Route path="/LeagueStandings" element={<LeagueStandings />} />
           <Route path="/NBA_News" element={<NBA_News />}/>
         </Routes>
-      </div>
       <div id="sidebar">
         <Sidebar />
+        </div>
         <Routes>
           <Route path="/TeamSchedule" element={<TeamSchedule />} />
           <Route path="/TeamStats" element={<TeamStats />} />
           <Route path="/TeamNews" element={<TeamNews />} />
           <Route path="/LiveTeam" element={<LiveTeam />} />
         </Routes>
-        </div>
         </GlobalStateProvider>
       </div>
     );

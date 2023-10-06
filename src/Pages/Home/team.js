@@ -20,7 +20,7 @@ export const nbaTeams = [
     {
       id: 3,
       teamName: 'Nets',
-      colors: ['#000000', '#00788C', '#A1A1A4'],
+      colors: ['#000000', '#000000', '#A1A1A4'],
       logo: "https://content.sportslogos.net/logos/6/3786/full/brooklyn_nets_logo_primary_20135043.png",
       conference: "Eastern",
       division: "Atlantic",
@@ -29,7 +29,7 @@ export const nbaTeams = [
     {
       id: 4,
       teamName: 'Hornets',
-      colors: ['#1D1160', '#FDB927', '#FFFFFF'],
+      colors: ['#1D1160', '#00788c', '#00788c'],
       logo: "https://content.sportslogos.net/logos/6/5120/full/1926_charlotte__hornets_-primary-2015.png",
       conference: "Eastern",
       division: "Southeast",
@@ -74,7 +74,7 @@ export const nbaTeams = [
     {
       id: 9,
       teamName: 'Pistons',
-      colors: ['#C8102E', '#FDB927', '#FFFFFF'],
+      colors: ['#c8102e', '#1d42ba', '#bec0c2'],
       logo: "https://content.sportslogos.net/logos/6/223/full/detroit_pistons_logo_primary_20185710.png",
       conference: "Eastern",
       division: "Atlantic",
@@ -228,7 +228,7 @@ export const nbaTeams = [
       id: 26,
       teamName: 'Kings',
       colors: ['#5A2D81', '#63727A', '#000000'],
-      logo: "https://content.sportslogos.net/logos/6/220/full/8190_atlanta_hawks-primary-2021.png",
+      logo: "https://content.sportslogos.net/logos/6/240/full/4043_sacramento_kings-primary-2017.png",
       conference: "Western",
       division: "Pacific",
       city: "Sacramento"

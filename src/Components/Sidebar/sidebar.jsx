@@ -3,7 +3,7 @@ import '../../App.css'
 import { useGlobalState } from '../context/context';
 
 const Sidebar = () => {
-    const { sidebarBackgroundColor } = useGlobalState();
+    const { selectedLogo } = useGlobalState();
 
   // Check if selectedTeam is available and has colors
 //   const selectedTeamColors = selectedTeam ? selectedTeam.colors : [];
@@ -13,7 +13,7 @@ const Sidebar = () => {
   
   return (
     <div id= "sidebar" 
-    style={{ backgroundColor: sidebarBackgroundColor}}
+    style={{ backgroundColor: selectedLogo.color[1]}}
     >
       <Link to="/TeamSchedule" >
         <button>Team Schedule</button>
