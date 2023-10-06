@@ -9,6 +9,7 @@ const NbaTeams = () => {
   const [apiTeams, setApiTeams] = useState([]);
   const [loading, setLoading] = useState(true);
   const { selectedLogo, setSelectedLogo} = useGlobalState();
+  
 
 
   useEffect(() => {
@@ -39,7 +40,7 @@ const NbaTeams = () => {
       if (matchingTeam) {
         return {
           ...apiTeam,
-          color: matchingTeam.color,
+          color: matchingTeam.colors,
           logo: matchingTeam.logo,
         };
       }
@@ -51,7 +52,7 @@ const NbaTeams = () => {
   };
 
   const mergedTeams = mergeTeams();
-
+  
   const handleLogoClick = (logoUrl) => {
     setSelectedLogo(logoUrl);
   };

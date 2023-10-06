@@ -1,9 +1,22 @@
 import { Link } from 'react-router-dom';
 import '../../App.css'
+import { useGlobalState } from '../context/context';
+
 
 const Navbar = () => {
+    const { navbarBackgroundColor } = useGlobalState();
+
+  // Check if selectedTeam is available and has colors
+  // const selectedTeamColors = selectedTeam ? selectedTeam.colors : [];
+
+  // Set the updatedNavbarBackgroundColor to the first color of the selected team or the default color
+  // const updatedNavbarBackgroundColor = selectedTeamColors[0] || navbarBackgroundColor;
+  
+  
   return (
-    <div id= "navbar">
+    <div id= "navbar" 
+    style={{ backgroundColor: navbarBackgroundColor}}
+    >
     <ul>
       <Link to="/" >
         <button>Home</button>
@@ -20,10 +33,10 @@ const Navbar = () => {
       <Link to="/NBA_News" >
         <button>NBA News</button>
       </Link>
-      
     </ul>
     </div>
   )
 };
+// console.log('Merged Teams:', mergedTeams);
 
 export default Navbar

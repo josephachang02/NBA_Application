@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
+import { nbaTeams } from '../../Pages/Home/team';
 
 const GlobalStateContext = createContext();
 
@@ -13,6 +14,11 @@ export function GlobalStateProvider({ children }) {
   );
   const [apiTeams, setApiTeams] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [navbarBackgroundColor, setNavbarBackgroundColor] = useState("#C9082A");
+  const [sidebarBackgroundColor, setSidebarBackgroundColor] = useState("#17408B");
+  const [mergedTeams, setMergedTeams] = useState([]);
+  const [selectedTeam, setSelectedTeam] =useState([]);
+  
 
   useEffect(() => {
     // Define the API URL
@@ -32,9 +38,42 @@ export function GlobalStateProvider({ children }) {
       });
   }, []);
 
+  useEffect(() => {
+    // Call mergeTeams function to merge the data
+
+    
+    const mergedData = mergeTeams(apiTeams);
+    // Set the mergedTeams state
+    setMergedTeams(mergedData);
+  
+    const matchingSelectedTeam = mergedData.find((team) => team.logo === selectedLogo);
+    setSelectedTeam(matchingSelectedTeam);
+  }, [apiTeams, selectedLogo]);  // Update mergedTeams when apiTeams changes
+
+  // Function to match API-fetched teams with static teams based on team name
+  const mergeTeams = (apiTeams) => {
+    const mergedTeams = apiTeams.map((apiTeam) => {
+      const matchingTeam = nbaTeams.find(
+        (staticTeam) => staticTeam.city === apiTeam.city
+      );
+
+      if (matchingTeam) {
+        return {
+          ...apiTeam,
+          color: matchingTeam.colors,
+          logo: matchingTeam.logo,
+        };
+      }
+
+      return apiTeam;
+    });
+
+    return mergedTeams;
+  };
+
   return (
-    <GlobalStateContext.Provider value={{ selectedLogo, setSelectedLogo, apiTeams, loading }}>
+    <GlobalStateContext.Provider value={{ selectedLogo, setSelectedLogo, apiTeams, loading, navbarBackgroundColor, sidebarBackgroundColor, mergedTeams, selectedTeam }}>
       {children}
     </GlobalStateContext.Provider>
   );
-}
+};
