@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import NbaTeams from './Pages/Home/home'
 import { GlobalStateProvider } from './Components/context/context'
-import { Routes, Route } from 'react-router-dom'
+import {  Routes, Route } from 'react-router-dom'
 import Logo from './Components/Logo/Logo'
 import Navbar from './Components/Navbar/Navbar'
 import Sidebar from './Components/Sidebar/sidebar'
@@ -28,11 +28,14 @@ function App() {
       <div id="logo">
         <Logo />
       </div>
+      <Routes>
+          <Route path="/" element={<NbaTeams />} />
+      </Routes>
       <div id="navbar">
         <Navbar />
       </div>
       <Routes>
-          <Route path="/" element={<NbaTeams />} />
+          {/* <Route path="/" element={<NbaTeams />} /> */}
           <Route path="/LiveScore" element={<LiveScore />} />
           <Route path="/LeagueLeaders" element={<LeagueLeaders />} />
           <Route path="/LeagueStandings" element={<LeagueStandings />} />

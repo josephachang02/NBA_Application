@@ -71,9 +71,6 @@ export function GlobalStateProvider({ children }) {
 
     return mergedTeams;
   };
-console.log(selectedLogo);
-console.log(mergedTeams);
-console.log(setSelectedLogo);
   return (
     <GlobalStateContext.Provider value={{ selectedLogo, setSelectedLogo, apiTeams, loading, navbarBackgroundColor, sidebarBackgroundColor, mergedTeams, selectedTeam }}>
       {children}

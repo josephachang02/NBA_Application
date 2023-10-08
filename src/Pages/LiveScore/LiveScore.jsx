@@ -1,13 +1,82 @@
-import React from 'react'
-import '../../App.css'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import '../../App.css';
+import { nbaTeams } from '../Home/team';
 
 
 const LiveScore = () => {
+  const [games, setGames] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const options = {
+        method: 'get',
+        url: 'https://api-nba-v1.p.rapidapi.com/games',
+        params: { live: 'all' },
+        headers: {
+          'X-RapidAPI-Key': '84672acda9msh20abd455bb006b3p18a164jsn485a74247cf7',
+          'X-RapidAPI-Host': 'api-nba-v1.p.rapidapi.com',
+        },
+      };
+
+      try {
+        const response = await axios.request(options);
+        console.log(response.data);
+        setGames(response.data.response); // Access the 'response' field in the data
+        setLoading(false);
+      } catch (error) {
+        console.error(error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
+  const getTeamInfo = (teamId) => {
+    return nbaTeams.find((team) => team.id === teamId);
+  };
+
   return (
     <div id="content">
-        <h1>LiveScore</h1>
+      <h1>Live Scores</h1>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <div>
+          <h2>Live Games:</h2>
+          <ul>
+            {games.map((game) => (
+              <li key={game.id}>
+                Game ID: {game.id}
+                <br />
+                Start Time: {new Date(game.date.start).toLocaleString()}
+                <br />
+                Visitor Team: {getTeamInfo(game.teams.visitors.id)?.name}
+                <img
+                  src={getTeamInfo(game.teams.visitors.id)?.logo}
+                  alt={`${getTeamInfo(game.teams.visitors.id)?.name} Logo`}
+                  width="30"
+                  height="30"
+                />
+                <br />
+                Home Team: {getTeamInfo(game.teams.home.id)?.name}
+                <img
+                  src={getTeamInfo(game.teams.home.id)?.logo}
+                  alt={`${getTeamInfo(game.teams.home.id)?.name} Logo`}
+                  width="30"
+                  height="30"
+                />
+                {/* You can display more game information as needed */}
+              </li>
+            ))}
+          </ul>
         </div>
-  )
-}
+      )}
+    </div>
+  );
+};
 
-export default LiveScore
+export default LiveScore;

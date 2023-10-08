@@ -55,7 +55,6 @@ const NbaTeams = () => {
 
   const handleLogoClick = (team) => {
     setSelectedLogo(team);
-    console.log(team)
   };
 
   return (

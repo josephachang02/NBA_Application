@@ -36,3 +36,15 @@
   grid-column: 2 / 3; 
   background-color: white;
 }
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adjust the gap value to control the spacing between articles */
+}
+
+.news-item {
+  list-style: none; /* Remove bullet points */
+  border-bottom: 1px solid #ccc; /* Add a horizontal line between articles */
+  padding: 5px; /* Add padding for spacing within each article */
+}
