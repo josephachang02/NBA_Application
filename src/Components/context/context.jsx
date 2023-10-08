@@ -20,6 +20,7 @@ export function GlobalStateProvider({ children }) {
   const [mergedTeams, setMergedTeams] = useState([]);
   const [selectedTeam, setSelectedTeam] =useState([]);
   
+console.log(selectedLogo);
 
   useEffect(() => {
     // Define the API URL

@@ -10,7 +10,7 @@ const NBA_News = () => {
     const getNbaNews = async () => {
       try {
         const newsData = await fetchNbaNews();
-        setNews(newsData.slice(0, 25)); // Update the state with the first 25 news articles
+        setNews(newsData); // Update the state with the news data
       } catch (error) {
         console.error(error);
       }
@@ -23,13 +23,11 @@ const NBA_News = () => {
     <div id="content">
       <h1>NBA News for all Teams. Headliners</h1>
       {/* Display the news headlines here */}
-      <div className="news-list">
+      <ul>
         {news.map((article, index) => (
-          <div key={index} className="news-item">
-            {article.title}
-          </div>
+          <li key={index}>{article.title}</li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };
