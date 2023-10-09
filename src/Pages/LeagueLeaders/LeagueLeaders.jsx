@@ -23,7 +23,7 @@ const LeagueLeaders = () => {
         console.log('API Response:', response.data); // Debugging: Log the API response
         
         // Filter NBA players based on their league (e.g., 'NBA')
-        const nbaPlayers = response.data.filter((player) => player.league === 'NBA');
+        const nbaPlayers = response.data.topPlayers.points.filter((player) => player.player.statistics.team.name === 'NBA');
         
         setPlayers(nbaPlayers);
         setLoading(false);

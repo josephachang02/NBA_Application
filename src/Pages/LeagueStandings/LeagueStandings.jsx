@@ -1,3 +1,6 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
 const LeagueStandings = () => {
   const [standings, setStandings] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -19,7 +22,9 @@ const LeagueStandings = () => {
 
       try {
         const response = await axios.request(options);
-        setStandings(response.data.api.standings);
+        console.log(response.data); // Log the entire response object
+        const standingsData = response.data.response; // Access the response array
+        setStandings(standingsData);
         setLoading(false);
       } catch (error) {
         console.error(error);
@@ -32,23 +37,23 @@ const LeagueStandings = () => {
 
   return (
     <div id="content">
-      <h1>League Standings</h1>
+      <h1 class="title">League Standings</h1>
       {loading ? (
         <p>Loading...</p>
       ) : (
         <div>
           <h2>Standings:</h2>
-          <ul>
-            {standings.map((team) => (
-              <li key={team.teamId}>
-                Team: {team.teamName}, Wins: {team.win}, Losses: {team.loss}
-              </li>
+          <div>
+            {standings.map((teamData, index) => (
+              <div key={index}>
+                {teamData.team.name}, Wins: {teamData.win.total}, Losses: {teamData.loss.total}
+                <br /> {/* Add a line break */}
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       )}
     </div>
   );
 };
-
-export default LeagueStandings
+  export default LeagueStandings

@@ -48,3 +48,8 @@
   border-bottom: 1px solid #ccc; /* Add a horizontal line between articles */
   padding: 5px; /* Add padding for spacing within each article */
 }
+
+.title {
+  text-align: center;
+  margin: 15px;
+}

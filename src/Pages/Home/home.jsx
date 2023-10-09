@@ -59,7 +59,7 @@ const NbaTeams = () => {
 
   return (
     <div id="content">
-      <h1>NBA Teams</h1>
+      <h1 class="title">NBA Teams</h1>
       
         <div className="team-buttons-container">
           {mergedTeams.map((team) => (

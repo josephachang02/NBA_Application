@@ -21,7 +21,7 @@ const NBA_News = () => {
 
   return (
     <div id="content">
-      <h1>NBA News for all Teams. Headliners</h1>
+      <h1 class="title">NBA News for all Teams. Headliners</h1>
       {/* Display the news headlines here */}
       <ul>
         {news.map((article, index) => (

@@ -32,7 +32,7 @@ const TeamNews = () => {
   return (
     <div id="content">
       {selectedLogo && (
-        <h1>{selectedLogo.name} News</h1>
+        <h1 class="title">{selectedLogo.name} News</h1>
       )}
       {/* Display the news headlines for the selected team here */}
       <div className="news-list">

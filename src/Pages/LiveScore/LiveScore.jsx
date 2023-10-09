@@ -41,7 +41,7 @@ const LiveScore = () => {
 
   return (
     <div id="content">
-      <h1>Live Scores</h1>
+      <h1 class="title">Live Scores</h1>
       {loading ? (
         <p>Loading...</p>
       ) : (
