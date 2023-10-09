@@ -19,8 +19,6 @@ export function GlobalStateProvider({ children }) {
   const [sidebarBackgroundColor, setSidebarBackgroundColor] = useState("#17408B");
   const [mergedTeams, setMergedTeams] = useState([]);
   const [selectedTeam, setSelectedTeam] =useState([]);
-  
-console.log(selectedLogo);
 
   useEffect(() => {
     // Define the API URL

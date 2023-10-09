@@ -16,16 +16,16 @@ const Sidebar = () => {
     style={{ backgroundColor: selectedLogo.color[1], display: 'flex', flexDirection: 'column', alignItems: 'center'}}
     >
       <Link to="/TeamSchedule" >
-        <button style={{ backgroundColor: selectedLogo.color[2], margin: '45px'}}>Team Schedule</button>
+        <button style={{ backgroundColor: selectedLogo.color[2], margin: '35px'}}>Team Schedule</button>
       </Link>
       <Link to="/TeamStats" >
-        <button style={{ backgroundColor: selectedLogo.color[2], marginBottom: '45px'}}>Team Stats</button>
+        <button style={{ backgroundColor: selectedLogo.color[2], marginBottom: '35px'}}>Team Stats</button>
       </Link>
       <Link to="/TeamNews" >
-        <button style={{ backgroundColor: selectedLogo.color[2], marginBottom: '45px'}}>Team News</button>
+        <button style={{ backgroundColor: selectedLogo.color[2], marginBottom: '35px'}}>Team News</button>
       </Link>
       <Link to="/LiveTeam" >
-        <button style={{ backgroundColor: selectedLogo.color[2], marginBottom: '45px'}}>Live Team Games</button>
+        <button style={{ backgroundColor: selectedLogo.color[2], marginBottom: '35px'}}>Live Team Games</button>
       </Link>
     </div>
   )
