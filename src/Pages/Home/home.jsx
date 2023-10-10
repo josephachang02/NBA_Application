@@ -13,10 +13,10 @@ const NbaTeams = () => {
 
 
   useEffect(() => {
-    // Define the API URL
+    
     const apiUrl = 'https://www.balldontlie.io/api/v1/teams';
 
-    // Make the API request using axios
+  
     axios
       .get(apiUrl)
       .then((response) => {
