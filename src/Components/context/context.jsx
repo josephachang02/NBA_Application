@@ -9,14 +9,18 @@ export function useGlobalState() {
 }
 
 export function GlobalStateProvider({ children }) {
+
+//initial logo of nba logo and color
   const [selectedLogo, setSelectedLogo] = useState(
     {logo: 'https://images.ctfassets.net/h8q6lxmb5akt/5qXnOINbPrHKXWa42m6NOa/421ab176b501f5bdae71290a8002545c/nba-logo_2x.png',
   color: ["#C9082A", "#17408B"]}
   );
   const [apiTeams, setApiTeams] = useState([]);
   const [loading, setLoading] = useState(true);
+  //defaulated nba color
   const [navbarBackgroundColor, setNavbarBackgroundColor] = useState("#C9082A");
   const [sidebarBackgroundColor, setSidebarBackgroundColor] = useState("#17408B");
+
   const [mergedTeams, setMergedTeams] = useState([]);
   const [selectedTeam, setSelectedTeam] =useState([]);
 
@@ -38,6 +42,8 @@ export function GlobalStateProvider({ children }) {
       });
   }, []);
 
+
+  //merge of selectedLogo and api team data together. 
   useEffect(() => {
     const mergedData = mergeTeams(apiTeams);
     setMergedTeams(mergedData);

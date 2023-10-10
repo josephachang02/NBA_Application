@@ -18,6 +18,9 @@ const NBA_News = () => {
     getNbaNews();
   }, []);
 
+
+  // this returns the list of articles headlining the NBA, emojis are contained within the text, but it would be nice to see image src included within this data
+  
   return (
     <div id="content">
       <h1 class="title">NBA News</h1>

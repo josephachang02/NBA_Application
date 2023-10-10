@@ -9,6 +9,7 @@ const Logo = () => {
 
   return (
     // <<div id ="logo">>
+    //logo image to be part of useGlobalState to be held regardless of what page you are navigating towards
    <>
    <Link to="/">
       <img

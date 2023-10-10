@@ -43,6 +43,9 @@ const LiveTeam = () => {
     }
   }, [selectedLogo]);
 
+
+
+  /// issue is that this information will not show if there is no games that date. I need to make a if else for if there are no games then show the next week's schedule
   return (
     <div id="content">
       <h1 className="title">{selectedLogo.name} Live Games</h1>

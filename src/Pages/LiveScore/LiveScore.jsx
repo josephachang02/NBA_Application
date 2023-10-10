@@ -39,6 +39,7 @@ const LiveScore = () => {
     return nbaTeams.find((team) => team.id === teamId);
   };
 
+  //currently have the live start time with the visitor and home info, but i want a score tracker based on points, response.data to find the game. info.
   return (
     <div id="content">
       <h1 class="title">NBA Live Scores</h1>

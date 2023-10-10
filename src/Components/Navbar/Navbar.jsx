@@ -5,7 +5,7 @@ import { useGlobalState } from '../context/context';
 
 const Navbar = () => {
     const { selectedLogo } = useGlobalState();
-  
+    
   return (
     <div id= "navbar" 
     style={{ backgroundColor: selectedLogo.color[0],display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}

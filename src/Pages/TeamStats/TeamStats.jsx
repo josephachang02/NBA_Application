@@ -38,6 +38,8 @@ const TeamStats = () => {
     }
   }, [selectedLogo]);
 
+
+  // issue here is that the console.log(response.data) shows information for the full team and when the selectedLogo team is called, it shows that information, but I was unable to call this data into the return. 
   return (
     <div id="content">
       <h1 className="title"> {selectedLogo.name} Stats</h1>

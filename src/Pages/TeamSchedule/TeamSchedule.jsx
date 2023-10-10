@@ -38,6 +38,8 @@ const TeamSchedule = () => {
     }
   }, [selectedLogo]);
 
+
+ // Similiar to the live score, i should make this a primary part of the schedule. issue is here the schedule will continue to post with no limit, however i should try and find a way to update it so that it shows the next week's schedule from today. 
   return (
     <div id="content">
       {selectedLogo && (

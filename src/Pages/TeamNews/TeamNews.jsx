@@ -39,6 +39,8 @@ const TeamNews = () => {
     getTeamNews();
   }, [selectedLogo]);
 
+
+// the news data included an additional parameter for the team name, however i am having issue showing that list of news articles for the specified team. 
   return (
     <div id="content">
       {selectedLogo && (

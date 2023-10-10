@@ -56,7 +56,7 @@ const NbaTeams = () => {
   const handleLogoClick = (team) => {
     setSelectedLogo(team);
   };
-
+//return the images of the logo as "buttons" that are from the mergedTeams.
   return (
     <div id="content">
       <h1 class="title">NBA Teams</h1>
