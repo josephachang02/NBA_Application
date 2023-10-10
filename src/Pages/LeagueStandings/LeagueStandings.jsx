@@ -22,8 +22,8 @@ const LeagueStandings = () => {
 
       try {
         const response = await axios.request(options);
-        console.log(response.data); // Log the entire response object
-        const standingsData = response.data.response; // Access the response array
+        console.log(response.data);
+        const standingsData = response.data.response;
         setStandings(standingsData);
         setLoading(false);
       } catch (error) {
@@ -47,7 +47,7 @@ const LeagueStandings = () => {
             {standings.map((teamData, index) => (
               <div key={index}>
                 {teamData.team.name}, Wins: {teamData.win.total}, Losses: {teamData.loss.total}
-                <br /> {/* Add a line break */}
+                <br />
               </div>
             ))}
           </div>

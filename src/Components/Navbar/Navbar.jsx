@@ -11,9 +11,6 @@ const Navbar = () => {
     style={{ backgroundColor: selectedLogo.color[0],display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}
     >
     <ul>
-      {/* <Link to="/" >
-        <button style={{ backgroundColor: selectedLogo.color[2], margin: '20px'}}>Home</button>
-      </Link> */}
       <Link to="/LiveScore" >
         <button style={{ backgroundColor: selectedLogo.color[2], margin: '20px'}}>Live Score</button>
       </Link>

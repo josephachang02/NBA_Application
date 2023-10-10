@@ -21,14 +21,14 @@ export function GlobalStateProvider({ children }) {
   const [selectedTeam, setSelectedTeam] =useState([]);
 
   useEffect(() => {
-    // Define the API URL
+
     const apiUrl = 'https://www.balldontlie.io/api/v1/teams';
 
-    // Make the API request using axios
+   
     axios
       .get(apiUrl)
       .then((response) => {
-        // Set the API-fetched teams data in state
+      
         setApiTeams(response.data.data);
         setLoading(false);
       })
@@ -39,18 +39,13 @@ export function GlobalStateProvider({ children }) {
   }, []);
 
   useEffect(() => {
-    // Call mergeTeams function to merge the data
-
-    
     const mergedData = mergeTeams(apiTeams);
-    // Set the mergedTeams state
     setMergedTeams(mergedData);
   
     const matchingSelectedTeam = mergedData.find((team) => team.logo === selectedLogo);
     setSelectedTeam(matchingSelectedTeam);
-  }, [apiTeams, selectedLogo]);  // Update mergedTeams when apiTeams changes
+  }, [apiTeams, selectedLogo]); 
 
-  // Function to match API-fetched teams with static teams based on team name
   const mergeTeams = (apiTeams) => {
     const mergedTeams = apiTeams.map((apiTeam) => {
       const matchingTeam = nbaTeams.find(

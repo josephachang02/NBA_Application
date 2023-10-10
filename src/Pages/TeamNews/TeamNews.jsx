@@ -3,22 +3,18 @@ import '../../App.css';
 import { fetchNbaNews } from '../NBA_News/fetchNBANews';
 import { useGlobalState } from '../../Components/context/context';
 import { nbaTeams } from '../Home/team';
-import axios from 'axios'; // Import axios
+import axios from 'axios';
 
 const TeamNews = () => {
   const { selectedLogo } = useGlobalState();
-  const [teamNews, setTeamNews] = useState([]); // State to store news data for the selected team
+  const [teamNews, setTeamNews] = useState([]);
 
   useEffect(() => {
-    // Fetch news for the selected team when the component mounts or when selectedLogo changes
     const getTeamNews = async () => {
       try {
         if (selectedLogo) {
-          // Find the team that matches the selectedLogo name
           const selectedTeam = nbaTeams.find((team) => team.name === selectedLogo.name);
-
-          if (selectedTeam) {
-            // Set up axios options with the selected team's name as the 'team' parameter
+        if (selectedTeam) {
             const options = {
               method: 'GET',
               url: 'https://nba-latest-news.p.rapidapi.com/articles',
@@ -29,10 +25,10 @@ const TeamNews = () => {
               }
             };
 
-            // Make the axios request
+            
             const response = await axios.request(options);
             console.log(response.data);
-            setTeamNews(response.data.slice(0, 25)); // Update the state with the first 25 news articles
+            setTeamNews(response.data.slice(0, 25));
           }
         }
       } catch (error) {
@@ -40,15 +36,14 @@ const TeamNews = () => {
       }
     };
 
-    getTeamNews(); // Call the function to fetch news
-  }, [selectedLogo]); // The effect runs when selectedLogo changes
+    getTeamNews();
+  }, [selectedLogo]);
 
   return (
     <div id="content">
       {selectedLogo && (
         <h1 className="title">{selectedLogo.name} News</h1>
       )}
-      {/* Display the news headlines for the selected team here */}
       <div className="news-list">
         {teamNews.map((article, index) => (
           <div key={index} className="news-item">

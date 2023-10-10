@@ -6,14 +6,14 @@
   }
   
   .team-button {
-    flex-basis: calc(16.66% - 10px); /* 16.66% width for each button with spacing */
+    flex-basis: calc(16.66% - 10px);
     margin: 5px;
     padding: 10px;
     text-align: center;
     background-color: white;
     border: none;
     cursor: pointer;
-    box-sizing: border-box; /* Ensure padding is included in dimensions */
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;

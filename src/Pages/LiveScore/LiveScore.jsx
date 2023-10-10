@@ -23,7 +23,7 @@ const LiveScore = () => {
       try {
         const response = await axios.request(options);
         console.log(response.data);
-        setGames(response.data.response); // Access the 'response' field in the data
+        setGames(response.data.response);
         setLoading(false);
       } catch (error) {
         console.error(error);
@@ -50,7 +50,6 @@ const LiveScore = () => {
           <ul>
             {games.map((game) => (
               <li key={game.id}>
-                Game ID: {game.id}
                 <br />
                 Start Time: {new Date(game.date.start).toLocaleString()}
                 <br />
@@ -69,7 +68,6 @@ const LiveScore = () => {
                   width="30"
                   height="30"
                 />
-                {/* You can display more game information as needed */}
               </li>
             ))}
           </ul>

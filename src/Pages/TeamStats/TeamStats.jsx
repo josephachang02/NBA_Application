@@ -21,10 +21,9 @@ const TeamStats = () => {
               'X-RapidAPI-Host': 'api-nba-v1.p.rapidapi.com',
             },
           });
-    
-          // Check if the response contains the necessary data
+
           if (response.data && response.data.statistics) {
-            setStatistics(response.data.statistics); // Assuming the statistics are nested under "statistics"
+            setStatistics(response.data.statistics);
           } else {
             console.error('Invalid API response structure.');
           }
@@ -37,18 +36,14 @@ const TeamStats = () => {
     } else {
       console.log('selectedLogo is not set');
     }
-  }, [selectedLogo]); // Run this effect once when the component mounts or when selectedLogo changes
-
-  console.log('Selected Logo:', selectedLogo);
-  console.log('Team Statistics:', statistics);
+  }, [selectedLogo]);
 
   return (
     <div id="content">
-      <h1 className="title">TeamStats</h1>
+      <h1 className="title"> {selectedLogo.name} Stats</h1>
       {statistics ? (
         <div>
-          <h2>{selectedLogo.name} Statistics for 2021 Season:</h2>
-          {/* Display the entire statistics object as JSON */}
+          <h2>{selectedLogo.name} Statistics for 2023 Season:</h2>
           <pre>{JSON.stringify(statistics, null, 2)}</pre>
         </div>
       ) : (
