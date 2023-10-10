@@ -42,7 +42,7 @@ const LeagueStandings = () => {
         <p>Loading...</p>
       ) : (
         <div>
-          <h2>Standings:</h2>
+          <h2>NBA Standings:</h2>
           <div>
             {standings.map((teamData, index) => (
               <div key={index}>

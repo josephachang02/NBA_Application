@@ -38,7 +38,7 @@ const LeagueLeaders = () => {
   // still working on ways to show the content of the API for leaders, main issue is that the players are set globally for the players in NBA but representing them based on their nationality/country of origin. Checking to see if there is a param for teams: NBA. 
   return (
     <div id="content">
-      <h1>League Leaders</h1>
+      <h1>NBA League Leaders</h1>
       {/* {loading ? (
         <p>Loading...</p>
       ) : error ? (

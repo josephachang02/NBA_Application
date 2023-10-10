@@ -20,7 +20,7 @@ const NBA_News = () => {
 
   return (
     <div id="content">
-      <h1 class="title">NBA News for all Teams. Headliners</h1>
+      <h1 class="title">NBA News</h1>
       <ul>
         {news.map((article, index) => (
           <li key={index}>{article.title}</li>
